@@ -131,10 +131,10 @@ export default function CasinoPage() {
             Casino Pride · Deltin Royale · Big Daddy Casino — All packages include chips, buffet & drinks. Best prices guaranteed.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="tel:+917774077816" className="flex items-center gap-2 bg-[#c9a84c] text-black px-6 py-3 rounded-full font-bold text-sm hover:bg-[#e8c97a] transition-all hover:scale-105">
+            <a href="tel:+918084676664" className="flex items-center gap-2 bg-[#c9a84c] text-black px-6 py-3 rounded-full font-bold text-sm hover:bg-[#e8c97a] transition-all hover:scale-105">
               <Phone size={15} /> Call to Book
             </a>
-            <a href="https://wa.me/917774077816" target="_blank" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all hover:scale-105">
+            <a href="https://wa.me/918084676664" target="_blank" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all hover:scale-105">
               <MessageCircle size={15} /> WhatsApp
             </a>
           </div>
@@ -177,7 +177,7 @@ export default function CasinoPage() {
                   ))}
                 </ul>
                 <a
-                  href={`https://wa.me/917774077816?text=${encodeURIComponent(pkg.waMsg)}`}
+                  href={`https://wa.me/918084676664?text=${encodeURIComponent(pkg.waMsg)}`}
                   target="_blank"
                   id={`casino-book-${pkg.name.toLowerCase().replace(/ /g, '-')}`}
                   className="w-full gold-gradient text-black font-bold py-3.5 rounded-xl text-center text-sm hover:opacity-90 transition-all hover:scale-[1.02] block"

@@ -23,7 +23,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
-const WHATSAPP_NUMBER = '917774077816'
+const WHATSAPP_NUMBER = '918084676664'
 
 function formatWhatsAppMessage(data: FormData): string {
   return encodeURIComponent(

@@ -2,7 +2,7 @@ export const pageSEO = {
   home: {
     title: 'Goa Elite Experience | Casino, Yacht & Cruise Booking Panjim',
     description:
-      'Book premium casino packages (Casino Pride, Deltin Royale, Big Daddy), luxury yacht rentals, sunset cruises in Goa. Trusted local experts in Panjim. Call +91 7774077816',
+      'Book premium casino packages (Casino Pride, Deltin Royale, Big Daddy), luxury yacht rentals, sunset cruises in Goa. Trusted local experts in Panjim. Call +91 8084676664',
     keywords:
       'casino booking goa, goa casino packages, luxury yacht goa, sunset cruise goa, boat cruise mandovi river',
   },
@@ -30,14 +30,14 @@ export const pageSEO = {
   carRental: {
     title: 'Car Rental Goa | Self Drive & Chauffeur Cars Panjim',
     description:
-      'Rent cars in Goa with or without driver. Hatchbacks to luxury SUVs. Best rates in Panjim. Book online or call +91 7774077816.',
+      'Rent cars in Goa with or without driver. Hatchbacks to luxury SUVs. Best rates in Panjim. Book online or call +91 8084676664.',
     keywords:
       'car rental goa, self drive car goa, chauffeur car goa, goa car hire, panjim car rental',
   },
   taxi: {
     title: 'Taxi Goa | Airport Transfer, Outstation & Local Taxi Panjim',
     description:
-      'Reliable taxi service in Goa. Airport transfers, outstation trips, local sightseeing. AC cabs available 24/7. Call +91 7774077816.',
+      'Reliable taxi service in Goa. Airport transfers, outstation trips, local sightseeing. AC cabs available 24/7. Call +91 8084676664.',
     keywords:
       'taxi goa, airport taxi goa, goa airport transfer, outstation cab goa, panjim taxi service',
   },
@@ -51,7 +51,7 @@ export const pageSEO = {
   contact: {
     title: 'Contact Goa Elite Experience | Book Now',
     description:
-      'Get in touch with Goa Elite Experience for casino bookings, yacht charters, and cruise packages. Call +91 7774077816 or WhatsApp us.',
+      'Get in touch with Goa Elite Experience for casino bookings, yacht charters, and cruise packages. Call +91 8084676664 or WhatsApp us.',
     keywords: 'contact goa elite experience, goa booking inquiry, goa tourism contact',
   },
 }

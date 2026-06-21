@@ -44,13 +44,13 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+917774077816"
+            href="tel:+918084676664"
             className="flex items-center gap-1.5 bg-[#c9a84c] text-black px-4 py-2 
                        rounded-full text-sm font-bold hover:bg-[#e8c97a] transition-all
                        hover:scale-105 shrink-0"
           >
             <Phone size={13} />
-            +91 7774077816
+            +91 8084676664
           </a>
         </div>
 
@@ -81,7 +81,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+917774077816"
+            href="tel:+918084676664"
             className="flex items-center gap-2 bg-[#c9a84c] text-black px-4 py-2.5 
                        rounded-full text-sm font-bold w-fit mt-3"
           >

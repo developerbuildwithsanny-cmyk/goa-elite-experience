@@ -301,8 +301,8 @@ export default function HomePage() {
                   Contact Us
                 </h3>
                 <div className="space-y-3 text-sm text-gray-300">
-                  <p>📞 <a href="tel:+917774077816" className="hover:text-[#c9a84c] transition-colors">+91 7774077816</a></p>
-                  <p>💬 <a href="https://wa.me/917774077816" target="_blank" className="hover:text-[#c9a84c] transition-colors">WhatsApp Chat</a></p>
+                  <p>📞 <a href="tel:+918084676664" className="hover:text-[#c9a84c] transition-colors">+91 8084676664</a></p>
+                  <p>💬 <a href="https://wa.me/918084676664" target="_blank" className="hover:text-[#c9a84c] transition-colors">WhatsApp Chat</a></p>
                   <p>📍 Panjim, Goa — 403001</p>
                   <p>🕐 Mon–Sun: 9 AM to 10 PM</p>
                 </div>
@@ -355,7 +355,7 @@ export default function HomePage() {
             <div>
               <h5 className="text-white font-semibold text-sm mb-3">Contact</h5>
               <div className="space-y-2 text-gray-400 text-sm">
-                <p><a href="tel:+917774077816" className="hover:text-[#c9a84c] transition-colors">+91 7774077816</a></p>
+                <p><a href="tel:+918084676664" className="hover:text-[#c9a84c] transition-colors">+91 8084676664</a></p>
                 <p>Panjim, Goa 403001</p>
                 <p>Mon–Sun: 9 AM – 10 PM</p>
               </div>

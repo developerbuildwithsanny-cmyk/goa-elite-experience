@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | Goa Elite Experience',
   },
   description:
-    'Book premium casino packages, luxury yacht rentals, sunset cruises in Goa. Best prices, trusted local experts. Call +91 7774077816',
+    'Book premium casino packages, luxury yacht rentals, sunset cruises in Goa. Best prices, trusted local experts. Call +91 8084676664',
   keywords: [
     'casino booking goa',
     'luxury yacht goa',

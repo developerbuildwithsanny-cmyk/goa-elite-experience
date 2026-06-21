@@ -5,7 +5,7 @@ import { Phone, MessageCircle, ChevronDown } from 'lucide-react'
 import BookingForm from './BookingForm'
 import Image from 'next/image'
 
-const WA_NUMBER = '917774077816'
+const WA_NUMBER = '918084676664'
 const WA_MSG = encodeURIComponent(
   "Hi! I want to book a Goa experience. Please share details."
 )
@@ -50,7 +50,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 mb-10">
             <a
-              href="tel:+917774077816"
+              href="tel:+918084676664"
               id="hero-call-btn"
               className="flex items-center gap-2 bg-[#c9a84c] text-black px-7 py-3.5 
                          rounded-full font-bold text-sm hover:bg-[#e8c97a] 

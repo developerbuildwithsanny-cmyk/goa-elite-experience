@@ -42,7 +42,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-400 text-xs">Phone</p>
-                      <a href="tel:+917774077816" className="text-white font-semibold hover:text-[#c9a84c] transition-colors">+91 7774077816</a>
+                      <a href="tel:+918084676664" className="text-white font-semibold hover:text-[#c9a84c] transition-colors">+91 8084676664</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -51,7 +51,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-400 text-xs">WhatsApp</p>
-                      <a href="https://wa.me/917774077816" target="_blank" className="text-white font-semibold hover:text-[#c9a84c] transition-colors">Chat on WhatsApp</a>
+                      <a href="https://wa.me/918084676664" target="_blank" className="text-white font-semibold hover:text-[#c9a84c] transition-colors">Chat on WhatsApp</a>
                     </div>
                   </div>
                   <div className="pt-2 border-t border-white/10 text-gray-300">
