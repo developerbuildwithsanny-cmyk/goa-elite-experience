@@ -15,9 +15,10 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
+        {/* Original hero: src="/images/hero-yacht.jpg" */}
         <Image
-          src="/images/hero-yacht.jpg"
-          alt="Luxury Goa Experience — Yacht at Sunset"
+          src="/images/fleet/sea-eagle/IMG-20250903-WA0057(1).jpg"
+          alt="Luxury Goa Experience — Sea Eagle Yacht at Sunset on Mandovi River"
           fill
           priority
           className="object-cover"

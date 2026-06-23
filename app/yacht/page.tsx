@@ -3,6 +3,7 @@ import { pageSEO } from '@/app/lib/seo'
 import Navbar from '@/app/components/Navbar'
 import BookingForm from '@/app/components/BookingForm'
 import FAQ from '@/app/components/FAQ'
+import FleetGallery from '@/app/components/FleetGallery'
 import Image from 'next/image'
 import { CheckCircle, Phone, MessageCircle, Cake, Heart, Briefcase, Anchor } from 'lucide-react'
 import Link from 'next/link'
@@ -169,6 +170,23 @@ export default function YachtPage() {
           <p className="text-center text-gray-400 text-sm mt-6">
             * Minimum 2 hours booking. Food packages, decorations & custom activities available at extra cost. Contact us for tailored quotes.
           </p>
+        </div>
+      </section>
+
+      {/* Our Fleet */}
+      <section className="section-padding bg-[#0d0d0d]">
+        <div className="container-xl">
+          <div className="text-center mb-14">
+            <p className="text-[#c9a84c] text-xs font-semibold tracking-widest uppercase mb-3">
+              Real Boats, Real Experiences
+            </p>
+            <h2 className="font-playfair text-3xl lg:text-4xl font-bold">Our Fleet</h2>
+            <div className="gold-divider mt-4" />
+            <p className="text-gray-400 text-sm mt-4 max-w-2xl mx-auto">
+              Browse our actual fleet of luxury yachts and boats. Every photo is from a real charter — click any boat to explore the full gallery.
+            </p>
+          </div>
+          <FleetGallery />
         </div>
       </section>
 

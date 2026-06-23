@@ -54,6 +54,40 @@ const cruises = [
     badge: null,
     service: 'Family Cruise',
   },
+  {
+    name: 'Island Adventure Cruise',
+    duration: 'Full Day',
+    price: '₹2,000',
+    per: 'per person',
+    desc: 'The ultimate Goan water adventure — an all-day island cruise packed with thrilling activities, great food, and non-stop entertainment on the open sea.',
+    includes: [
+      'Kayaking & sub-board fun',
+      'Jet ski ride',
+      'Banana boat & bumper ride',
+      'Swimming in open waters',
+      'Veg & non-veg buffet lunch',
+      '2 complimentary drinks',
+      'Live DJ on board',
+      'Pickup & drop included',
+    ],
+    badge: 'Adventure',
+    service: 'Island Adventure Cruise',
+  },
+  {
+    name: 'Dolphin Watching Trip',
+    duration: '1 Hour',
+    price: '₹400',
+    per: 'per person',
+    desc: "Glide along Goa's scenic coastline on a one-hour dolphin spotting adventure. Watch wild dolphins leap and play while passing iconic landmarks — Reis Magos Fort, Aguada Lighthouse, the historic Aguada Jail, Gurudwara Temple, and Jimmy Palace.",
+    includes: [
+      'Natural dolphin sightings',
+      'Scenic landmark views',
+      'Kids below 5 ride free',
+      'Weather-dependent (no guarantee)',
+    ],
+    badge: 'Family Friendly',
+    service: 'Dolphin Watching Trip',
+  },
 ]
 
 const cruiseFAQ = [
@@ -184,6 +218,58 @@ export default function CruisesPage() {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Sunset Cruise Gallery */}
+      <section className="section-padding bg-[#0d0d0d]">
+        <div className="container-xl">
+          <div className="text-center mb-14">
+            <p className="text-[#c9a84c] text-xs font-semibold tracking-widest uppercase mb-3">
+              Golden Hour on the Water
+            </p>
+            <h2 className="font-playfair text-3xl lg:text-4xl font-bold">
+              Sunset Cruise — Real Views from Our Fleet
+            </h2>
+            <div className="gold-divider mt-4" />
+            <p className="text-gray-400 text-sm mt-4 max-w-2xl mx-auto">
+              These are genuine golden-hour shots from our Sea Eagle yacht on the Mandovi River — no filters, no stock photos.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative h-72 md:h-80 rounded-2xl overflow-hidden border border-[#c9a84c]/20
+                            hover:border-[#c9a84c]/50 transition-all duration-300
+                            hover:shadow-[0_8px_32px_rgba(201,168,76,0.15)]">
+              <Image
+                src="/images/fleet/sea-eagle/IMG-20250903-WA0057(1).jpg"
+                alt="Sea Eagle yacht at sunset with heritage church on Mandovi River"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">
+                Sea Eagle · Sunset with Reis Magos Church
+              </span>
+            </div>
+            <div className="relative h-72 md:h-80 rounded-2xl overflow-hidden border border-[#c9a84c]/20
+                            hover:border-[#c9a84c]/50 transition-all duration-300
+                            hover:shadow-[0_8px_32px_rgba(201,168,76,0.15)]">
+              <Image
+                src="/images/fleet/sea-eagle/IMG-20250903-WA0053.jpg"
+                alt="Sea Eagle yacht deck at golden hour on Mandovi River Goa"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">
+                Sea Eagle · Deck View at Golden Hour
+              </span>
+            </div>
           </div>
         </div>
       </section>

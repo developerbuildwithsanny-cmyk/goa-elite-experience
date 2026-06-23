@@ -185,3 +185,110 @@ body {
   background: rgba(201, 168, 76, 0.3);
   color: #fff;
 }
+
+/* ── Lightbox ────────────────────────────────────────── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: #c9a84c;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.lightbox-btn:hover {
+  background: rgba(201, 168, 76, 0.3);
+  border-color: #c9a84c;
+}
+
+.lightbox-btn-prev {
+  left: 1rem;
+}
+
+.lightbox-btn-next {
+  right: 1rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: #c9a84c;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.lightbox-close:hover {
+  background: rgba(201, 168, 76, 0.3);
+  border-color: #c9a84c;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: #c9a84c;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  z-index: 10;
+}
+
+.lightbox-title {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .lightbox-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .lightbox-btn-prev {
+    left: 0.5rem;
+  }
+  .lightbox-btn-next {
+    right: 0.5rem;
+  }
+}

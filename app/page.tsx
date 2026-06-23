@@ -82,6 +82,13 @@ const experiences = [
     includes: 'Dedicated Crew + Welcome Drinks + Snacks',
     href: '/yacht',
   },
+  {
+    title: 'Dolphin Watching Trip',
+    image: '/images/fleet/sea-eagle/IMG-20250903-WA0057(1).jpg',
+    price: '₹400',
+    includes: 'Dolphin Sightings + Landmark Views + Kids Below 5 Free',
+    href: '/cruises',
+  },
 ]
 
 const stats = [
@@ -237,7 +244,7 @@ export default function HomePage() {
             <div className="gold-divider mt-4" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {experiences.map((exp) => (
               <Link
                 key={exp.title}
