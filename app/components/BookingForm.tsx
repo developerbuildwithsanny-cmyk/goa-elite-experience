@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { CheckCircle, Loader2, MessageCircle } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { SERVICES } from '@/app/types'
 
 const schema = z.object({
@@ -58,11 +59,15 @@ export default function BookingForm({
     register,
     handleSubmit,
     formState: { errors },
+    watch,
     reset,
   } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: { service: preselectedService ?? '' },
   })
+
+  const selectedService = watch('service')
+  const showMessage = !!selectedService
 
   const onSubmit = async (data: FormData) => {
     setLoading(true)
@@ -120,7 +125,7 @@ export default function BookingForm({
   }
 
   return (
-    <div className={`glass-dark rounded-2xl p-6 lg:p-8 ${className}`}>
+    <div id="page-booking-form" className={`glass-dark rounded-2xl p-6 lg:p-8 ${className}`}>
       <h3 className="font-playfair text-2xl font-bold text-[#c9a84c] mb-1">
         Book Your Goa Experience
       </h3>
@@ -188,16 +193,27 @@ export default function BookingForm({
           )}
         </div>
 
-        {/* Message (hidden in compact mode) */}
-        {!compact && (
-          <textarea
-            {...register('message')}
-            id="booking-message"
-            rows={3}
-            placeholder="Tell us more (dates, group size, budget…)"
-            className="input-dark resize-none"
-          />
-        )}
+        {/* Message — shown after service is selected */}
+        <AnimatePresence>
+          {showMessage && (
+            <motion.div
+              key="message-field"
+              initial={{ opacity: 0, height: 0, marginTop: 0 }}
+              animate={{ opacity: 1, height: 'auto', marginTop: 0 }}
+              exit={{ opacity: 0, height: 0, marginTop: 0 }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              style={{ overflow: 'hidden' }}
+            >
+              <textarea
+                {...register('message')}
+                id="booking-message"
+                rows={3}
+                placeholder="Tell us more (dates, group size, budget…)"
+                className="input-dark resize-none w-full"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <button
           type="submit"

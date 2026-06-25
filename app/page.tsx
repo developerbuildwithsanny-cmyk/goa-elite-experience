@@ -8,6 +8,7 @@ import BookingForm from '@/app/components/BookingForm'
 import { Ship, Anchor, Car, MapPin, Building2, Waves, ArrowRight, Users, Star, Clock, Shield } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
   title: pageSEO.home.title,
@@ -183,54 +184,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats / Why Choose Us */}
-      <section className="section-padding bg-[#0a0a0a]">
-        <div className="container-xl">
-          <div className="text-center mb-14">
-            <p className="text-[#c9a84c] text-xs font-semibold tracking-widest uppercase mb-3">
-              Why Choose Us
-            </p>
-            <h2 className="font-playfair text-3xl lg:text-4xl font-bold">
-              Goa's Most Trusted Experience Partner
-            </h2>
-            <div className="gold-divider mt-4" />
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            {stats.map((s) => {
-              const Icon = s.icon
-              return (
-                <div
-                  key={s.label}
-                  className="glass-dark rounded-2xl p-6 text-center border border-[#c9a84c]/20 
-                             hover:border-[#c9a84c]/60 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center mx-auto mb-3">
-                    <Icon size={20} className="text-black" />
-                  </div>
-                  <p className="font-playfair text-3xl font-bold text-[#c9a84c]">{s.value}</p>
-                  <p className="text-gray-400 text-sm mt-1">{s.label}</p>
-                </div>
-              )
-            })}
-          </div>
-
-          <div className="glass-dark rounded-2xl p-8 grid md:grid-cols-3 gap-6 text-center border border-[#c9a84c]/20">
-            {[
-              { title: 'Instant Confirmation', desc: 'Get booking confirmation via WhatsApp within 30 minutes of inquiry.' },
-              { title: 'Best Price Guarantee', desc: 'We match or beat any competitor price for the same package.' },
-              { title: 'Local Expertise', desc: '3+ years in Goa — we know every casino, yacht, and cruise in the city.' },
-            ].map((f) => (
-              <div key={f.title}>
-                <div className="gold-divider mb-4" />
-                <h3 className="font-playfair text-lg font-bold text-[#c9a84c] mb-2">{f.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Popular Experiences */}
       <section className="section-padding bg-[#0d0d0d]">
         <div className="container-xl">
@@ -283,12 +236,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Stats / Why Choose Us */}
+      <section className="section-padding bg-[#0a0a0a]">
+        <div className="container-xl">
+          <div className="text-center mb-14">
+            <p className="text-[#c9a84c] text-xs font-semibold tracking-widest uppercase mb-3">
+              Why Choose Us
+            </p>
+            <h2 className="font-playfair text-3xl lg:text-4xl font-bold">
+              Goa's Most Trusted Experience Partner
+            </h2>
+            <div className="gold-divider mt-4" />
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            {stats.map((s) => {
+              const Icon = s.icon
+              return (
+                <div
+                  key={s.label}
+                  className="glass-dark rounded-2xl p-6 text-center border border-[#c9a84c]/20 
+                             hover:border-[#c9a84c]/60 transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center mx-auto mb-3">
+                    <Icon size={20} className="text-black" />
+                  </div>
+                  <p className="font-playfair text-3xl font-bold text-[#c9a84c]">{s.value}</p>
+                  <p className="text-gray-400 text-sm mt-1">{s.label}</p>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="glass-dark rounded-2xl p-8 grid md:grid-cols-3 gap-6 text-center border border-[#c9a84c]/20">
+            {[
+              { title: 'Instant Confirmation', desc: 'Get booking confirmation via WhatsApp within 30 minutes of inquiry.' },
+              { title: 'Best Price Guarantee', desc: 'We match or beat any competitor price for the same package.' },
+              { title: 'Local Expertise', desc: '3+ years in Goa — we know every casino, yacht, and cruise in the city.' },
+            ].map((f) => (
+              <div key={f.title}>
+                <div className="gold-divider mb-4" />
+                <h3 className="font-playfair text-lg font-bold text-[#c9a84c] mb-2">{f.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Testimonials />
 
       <FAQ items={homeFAQ} title="Common Questions About Goa Bookings" />
 
       {/* CTA / Contact */}
-      <section className="section-padding bg-[#0d0d0d]">
+      <section className="section-padding pb-20 bg-[#0d0d0d]">
         <div className="container-xl">
           <div className="text-center mb-12">
             <p className="text-[#c9a84c] text-xs font-semibold tracking-widest uppercase mb-3">
@@ -304,14 +305,38 @@ export default function HomePage() {
             <BookingForm />
             <div className="space-y-6">
               <div className="glass-dark rounded-2xl p-6 border border-[#c9a84c]/20">
-                <h3 className="font-playfair text-xl font-bold text-[#c9a84c] mb-4">
+                <h3 className="font-playfair text-xl font-bold text-[#c9a84c] mb-5">
                   Contact Us
                 </h3>
-                <div className="space-y-3 text-sm text-gray-300">
-                  <p>📞 <a href="tel:+918084676664" className="hover:text-[#c9a84c] transition-colors">+91 8084676664</a></p>
-                  <p>💬 <a href="https://wa.me/918084676664" target="_blank" className="hover:text-[#c9a84c] transition-colors">WhatsApp Chat</a></p>
-                  <p>📍 Panjim, Goa — 403001</p>
-                  <p>🕐 Mon–Sun: 9 AM to 10 PM</p>
+
+                {/* Plain text contact links */}
+                <div className="space-y-3 mb-5">
+                  <div className="flex items-center gap-3">
+                    <CallToFormButton
+                      variant="call"
+                      label="Call Now"
+                      plain
+                      className="text-[#c9a84c] hover:text-[#e8c97a] text-sm"
+                    />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CallToFormButton
+                      variant="whatsapp"
+                      label="WhatsApp Us"
+                      plain
+                      className="text-[#25D366] hover:opacity-70 text-sm"
+                    />
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="border-t border-white/10 pt-4 space-y-2 text-sm text-gray-400">
+                  <p className="flex items-center gap-2">
+                    <span className="text-[#c9a84c]">📍</span> Panjim, Goa — 403001
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-[#c9a84c]">🕐</span> Mon–Sun: 9 AM to 10 PM
+                  </p>
                 </div>
               </div>
               <div className="glass-dark rounded-2xl overflow-hidden border border-[#c9a84c]/20">
@@ -330,49 +355,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#0a0a0a] border-t border-[#c9a84c]/20 py-10">
-        <div className="container-xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h4 className="font-playfair text-[#c9a84c] font-bold text-lg mb-3">
-                Goa Elite Experience
-              </h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Your trusted partner for premium casino, cruise, and yacht experiences in Goa.
-              </p>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold text-sm mb-3">Services</h5>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                {[['Casino Booking', '/casino'], ['Boat Cruises', '/cruises'], ['Luxury Yacht', '/yacht'], ['Car Rental', '/car-rental'], ['Taxi Service', '/taxi']].map(([label, href]) => (
-                  <li key={href}><Link href={href} className="hover:text-[#c9a84c] transition-colors">{label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold text-sm mb-3">Quick Links</h5>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                {[['Blog', '/blog'], ['Contact', '/contact']].map(([label, href]) => (
-                  <li key={href}><Link href={href} className="hover:text-[#c9a84c] transition-colors">{label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold text-sm mb-3">Contact</h5>
-              <div className="space-y-2 text-gray-400 text-sm">
-                <p><a href="tel:+918084676664" className="hover:text-[#c9a84c] transition-colors">+91 8084676664</a></p>
-                <p>Panjim, Goa 403001</p>
-                <p>Mon–Sun: 9 AM – 10 PM</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-[#c9a84c]/10 pt-6 text-center text-gray-500 text-xs">
-            © {new Date().getFullYear()} Goa Elite Experience. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </>
   )
 }

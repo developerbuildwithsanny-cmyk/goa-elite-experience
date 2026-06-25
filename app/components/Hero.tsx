@@ -5,10 +5,15 @@ import { Phone, MessageCircle, ChevronDown } from 'lucide-react'
 import BookingForm from './BookingForm'
 import Image from 'next/image'
 
-const WA_NUMBER = '918084676664'
-const WA_MSG = encodeURIComponent(
-  "Hi! I want to book a Goa experience. Please share details."
-)
+function scrollAndHighlight() {
+  const form = document.getElementById('page-booking-form')
+  if (!form) return
+  form.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  form.classList.remove('form-highlight')
+  void form.offsetWidth
+  form.classList.add('form-highlight')
+  setTimeout(() => form.classList.remove('form-highlight'), 2800)
+}
 
 export default function Hero() {
   return (
@@ -17,7 +22,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         {/* Original hero: src="/images/hero-yacht.jpg" */}
         <Image
-          src="/images/fleet/sea-eagle/IMG-20250903-WA0057(1).jpg"
+          src="/images/hero-yacht.jpg"
           alt="Luxury Goa Experience — Sea Eagle Yacht at Sunset on Mandovi River"
           fill
           priority
@@ -50,26 +55,26 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-10">
-            <a
-              href="tel:+918084676664"
+            <button
               id="hero-call-btn"
+              type="button"
+              onClick={scrollAndHighlight}
               className="flex items-center gap-2 bg-[#c9a84c] text-black px-7 py-3.5 
                          rounded-full font-bold text-sm hover:bg-[#e8c97a] 
                          transition-all hover:scale-105 hover:shadow-[0_0_24px_rgba(201,168,76,0.5)]"
             >
               <Phone size={16} /> Call Now
-            </a>
-            <a
-              href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
+            </button>
+            <button
               id="hero-whatsapp-btn"
-              target="_blank"
-              rel="noopener noreferrer"
+              type="button"
+              onClick={scrollAndHighlight}
               className="flex items-center gap-2 bg-[#25D366] text-white px-7 py-3.5 
                          rounded-full font-bold text-sm hover:bg-[#22c55e] 
                          transition-all hover:scale-105"
             >
               <MessageCircle size={16} /> WhatsApp
-            </a>
+            </button>
           </div>
 
           {/* Trust badges */}
@@ -90,6 +95,7 @@ export default function Hero() {
 
         {/* Right — Booking Form */}
         <motion.div
+          id="hero-booking-form"
           initial={{ opacity: 0, x: 48 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}

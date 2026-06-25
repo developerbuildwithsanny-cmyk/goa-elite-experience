@@ -4,6 +4,7 @@ import Navbar from '@/app/components/Navbar'
 import BookingForm from '@/app/components/BookingForm'
 import { Phone, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
+import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
   title: pageSEO.contact.title,
@@ -42,7 +43,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-400 text-xs">Phone</p>
-                      <a href="tel:+918084676664" className="text-white font-semibold hover:text-[#c9a84c] transition-colors">+91 8084676664</a>
+                      <CallToFormButton variant="call" label="Call Now" id="contact-call-btn" className="mt-0.5 px-0 py-0 bg-transparent text-white hover:bg-transparent hover:text-[#c9a84c] font-semibold text-sm gap-1.5" />
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -51,7 +52,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-400 text-xs">WhatsApp</p>
-                      <a href="https://wa.me/918084676664" target="_blank" className="text-white font-semibold hover:text-[#c9a84c] transition-colors">Chat on WhatsApp</a>
+                      <CallToFormButton variant="whatsapp" label="Chat on WhatsApp" id="contact-wa-btn" className="mt-0.5 px-0 py-0 bg-transparent text-white hover:bg-transparent hover:text-[#25D366] font-semibold text-sm gap-1.5" />
                     </div>
                   </div>
                   <div className="pt-2 border-t border-white/10 text-gray-300">
@@ -75,12 +76,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="bg-[#0a0a0a] border-t border-[#c9a84c]/20 py-8">
-        <div className="container-xl text-center text-gray-500 text-sm">
-          <Link href="/" className="text-[#c9a84c] hover:text-[#e8c97a]">← Back to Home</Link>
-          <span className="mx-3">·</span> © {new Date().getFullYear()} Goa Elite Experience
-        </div>
-      </footer>
     </>
   )
 }

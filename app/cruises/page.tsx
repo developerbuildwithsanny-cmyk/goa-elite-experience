@@ -4,8 +4,9 @@ import Navbar from '@/app/components/Navbar'
 import BookingForm from '@/app/components/BookingForm'
 import FAQ from '@/app/components/FAQ'
 import Image from 'next/image'
-import { CheckCircle, Phone, MessageCircle, Music, Utensils, Sun, Users } from 'lucide-react'
+import { CheckCircle, Music, Utensils, Sun, Users } from 'lucide-react'
 import Link from 'next/link'
+import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
   title: pageSEO.cruises.title,
@@ -23,6 +24,7 @@ const cruises = [
     includes: ['Welcome drink', 'Goan snacks platter', 'Live folk music & dance', 'Stunning sunset views'],
     badge: 'Best Seller',
     service: 'Sunset Cruise',
+    image: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'Dinner Cruise',
@@ -33,6 +35,7 @@ const cruises = [
     includes: ['Welcome drink', 'Full dinner buffet', 'Live music & cultural show', 'River views', 'Dessert included'],
     badge: 'Most Luxurious',
     service: 'Dinner Cruise',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'Party Cruise',
@@ -43,6 +46,7 @@ const cruises = [
     includes: ['2 complimentary drinks', 'DJ music all night', 'Dance floor on deck', 'Snacks included'],
     badge: 'Party Favorite',
     service: 'Party Cruise',
+    image: 'https://images.unsplash.com/photo-1593693411762-b91c1097e3ab?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'Family Cruise',
@@ -53,6 +57,7 @@ const cruises = [
     includes: ['Snacks & juice', 'Light Goan music', 'Kids friendly', 'River & bridge views'],
     badge: null,
     service: 'Family Cruise',
+    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80',
   },
   {
     name: 'Island Adventure Cruise',
@@ -72,6 +77,7 @@ const cruises = [
     ],
     badge: 'Adventure',
     service: 'Island Adventure Cruise',
+    image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1600&q=80',
   },
   {
     name: 'Dolphin Watching Trip',
@@ -83,10 +89,12 @@ const cruises = [
       'Natural dolphin sightings',
       'Scenic landmark views',
       'Kids below 5 ride free',
-      'Weather-dependent (no guarantee)',
+      'Weather-dependent',
+      'Guaranteed fun for all ages',
     ],
-    badge: 'Family Friendly',
-    service: 'Dolphin Watching Trip',
+    badge: null,
+    service: 'Dolphin Watching',
+    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80',
   },
 ]
 
@@ -140,12 +148,8 @@ export default function CruisesPage() {
             Sunset Cruise · Dinner Cruise · Party Cruise · Family Cruise — Live music, drinks & unforgettable views.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="tel:+918084676664" className="flex items-center gap-2 bg-[#c9a84c] text-black px-6 py-3 rounded-full font-bold text-sm hover:bg-[#e8c97a] transition-all hover:scale-105">
-              <Phone size={15} /> Call to Book
-            </a>
-            <a href="https://wa.me/918084676664" target="_blank" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all hover:scale-105">
-              <MessageCircle size={15} /> WhatsApp
-            </a>
+            <CallToFormButton variant="call" label="Call to Book" id="cruises-call-btn" />
+            <CallToFormButton variant="whatsapp" id="cruises-wa-btn" />
           </div>
         </div>
       </section>
@@ -160,36 +164,41 @@ export default function CruisesPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {cruises.map((c) => (
-              <div key={c.name} className="glass-dark rounded-2xl p-7 border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors relative">
-                {c.badge && (
-                  <span className="absolute top-4 right-4 bg-[#c9a84c] text-black text-xs font-bold px-2.5 py-1 rounded-full">{c.badge}</span>
-                )}
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h3 className="font-playfair text-xl font-bold text-[#c9a84c]">{c.name}</h3>
-                    <p className="text-gray-400 text-sm mt-0.5">⏱ {c.duration}</p>
-                  </div>
-                  <div className="text-right shrink-0">
-                    <span className="font-playfair text-2xl font-bold text-white">{c.price}</span>
-                    <p className="text-gray-500 text-xs">{c.per}</p>
-                  </div>
+              <div key={c.name} className="glass-dark rounded-2xl overflow-hidden border border-[#c9a84c]/20 hover:border-[#c9a84c]/50 transition-colors relative flex flex-col group">
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image src={c.image} alt={c.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  {c.badge && (
+                    <span className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm border border-[#c9a84c]/50 text-[#c9a84c] text-xs font-bold px-3 py-1.5 rounded-full z-10">
+                      {c.badge}
+                    </span>
+                  )}
+                  <h3 className="absolute bottom-4 left-6 font-playfair text-2xl font-bold text-white z-10">{c.name}</h3>
                 </div>
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{c.desc}</p>
-                <ul className="space-y-1.5 mb-6">
-                  {c.includes.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-gray-300">
-                      <CheckCircle size={13} className="text-[#c9a84c] shrink-0" /> {item}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={`https://wa.me/918084676664?text=${encodeURIComponent(`I want to book the ${c.name}. Please share availability and details.`)}`}
-                  target="_blank"
-                  id={`cruise-book-${c.name.toLowerCase().replace(/ /g, '-')}`}
-                  className="block w-full gold-gradient text-black font-bold py-3 rounded-xl text-center text-sm hover:opacity-90 transition-all hover:scale-[1.02]"
-                >
-                  Book {c.name} →
-                </a>
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <div>
+                      <p className="text-gray-400 text-sm mt-0.5">⏱ {c.duration}</p>
+                    </div>
+                    <div className="text-right shrink-0">
+                      <span className="font-playfair text-2xl font-bold text-[#c9a84c]">{c.price}</span>
+                      <p className="text-gray-500 text-xs">{c.per}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">{c.desc}</p>
+                  <ul className="space-y-1.5 mb-6 flex-1">
+                    {c.includes.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm text-gray-300">
+                        <CheckCircle size={13} className="text-[#c9a84c] shrink-0" /> {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <CallToFormButton
+                    variant="book"
+                    id={`cruise-book-${c.name.toLowerCase().replace(/ /g, '-')}`}
+                    label={`Book ${c.name} →`}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -285,13 +294,6 @@ export default function CruisesPage() {
         </div>
       </section>
 
-      <footer className="bg-[#0a0a0a] border-t border-[#c9a84c]/20 py-8">
-        <div className="container-xl text-center text-gray-500 text-sm">
-          <Link href="/" className="text-[#c9a84c] hover:text-[#e8c97a]">← Back to Home</Link>
-          <span className="mx-3">·</span>
-          © {new Date().getFullYear()} Goa Elite Experience
-        </div>
-      </footer>
     </>
   )
 }

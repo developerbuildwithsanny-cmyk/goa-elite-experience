@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Phone, Menu, X } from 'lucide-react'
 
 const navLinks = [
@@ -16,9 +16,30 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
+function scrollAndHighlight() {
+  const form = document.getElementById('page-booking-form')
+  if (!form) return
+  form.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  form.classList.remove('form-highlight')
+  void form.offsetWidth
+  form.classList.add('form-highlight')
+  setTimeout(() => form.classList.remove('form-highlight'), 2800)
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
+
+  function handleCallClick() {
+    // If on home page, scroll to form directly; otherwise navigate home first
+    if (pathname === '/') {
+      scrollAndHighlight()
+    } else {
+      router.push('/#page-booking-form')
+    }
+    setOpen(false)
+  }
 
   return (
     <nav className="fixed top-0 w-full z-40 glass-dark">
@@ -43,26 +64,37 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <a
-            href="tel:+918084676664"
+          <button
+            id="navbar-call-btn"
+            onClick={handleCallClick}
             className="flex items-center gap-1.5 bg-[#c9a84c] text-black px-4 py-2 
                        rounded-full text-sm font-bold hover:bg-[#e8c97a] transition-all
                        hover:scale-105 shrink-0"
           >
-            <Phone size={13} />
-            +91 8084676664
-          </a>
+            <Phone size={13} /> Call
+          </button>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          id="navbar-hamburger"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          className="lg:hidden text-[#c9a84c] p-1"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: Call button + hamburger */}
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            id="navbar-mobile-call"
+            onClick={handleCallClick}
+            aria-label="Call us"
+            className="flex items-center gap-1.5 bg-[#c9a84c] text-black px-3 py-1.5 
+                       rounded-full text-xs font-bold hover:bg-[#e8c97a] transition-all"
+          >
+            <Phone size={13} /> Call
+          </button>
+          <button
+            id="navbar-hamburger"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            className="text-[#c9a84c] p-1"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -80,13 +112,13 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <a
-            href="tel:+918084676664"
+          <button
+            onClick={handleCallClick}
             className="flex items-center gap-2 bg-[#c9a84c] text-black px-4 py-2.5 
                        rounded-full text-sm font-bold w-fit mt-3"
           >
             <Phone size={14} /> Call Now
-          </a>
+          </button>
         </div>
       )}
     </nav>

@@ -154,6 +154,17 @@ body {
   100% { background-position: 200% center; }
 }
 
+/* Form highlight ring — fires when Call/WhatsApp buttons scroll to booking form */
+@keyframes form-ring-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.9), 0 0 32px rgba(201,168,76,0.3); border-color: rgba(201,168,76,0.9); }
+  50%  { box-shadow: 0 0 0 10px rgba(201,168,76,0.2), 0 0 48px rgba(201,168,76,0.15); border-color: rgba(201,168,76,0.7); }
+  100% { box-shadow: 0 0 0 18px rgba(201,168,76,0), 0 0 0 rgba(201,168,76,0); border-color: rgba(201,168,76,0.2); }
+}
+
+.form-highlight {
+  animation: form-ring-pulse 0.9s ease-out 3;
+}
+
 .animate-pulse-gold {
   animation: pulse-gold 2s infinite;
 }

@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { pageSEO } from '@/app/lib/seo'
 import Navbar from '@/app/components/Navbar'
 import BookingForm from '@/app/components/BookingForm'
-import { Phone, MessageCircle, Plane, MapPin, Clock, Star } from 'lucide-react'
+import { Plane, MapPin, Clock, Star } from 'lucide-react'
 import Link from 'next/link'
+import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
   title: pageSEO.taxi.title,
@@ -34,12 +35,8 @@ export default function TaxiPage() {
             Airport transfers, sightseeing tours, outstation trips & hourly rentals. AC cabs available 24/7 with experienced local drivers.
           </p>
           <div className="flex gap-4 flex-wrap justify-center">
-            <a href="tel:+918084676664" className="flex items-center gap-2 bg-[#c9a84c] text-black px-6 py-3 rounded-full font-bold text-sm hover:bg-[#e8c97a] transition-all hover:scale-105">
-              <Phone size={15} /> Call Now
-            </a>
-            <a href="https://wa.me/918084676664" target="_blank" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all hover:scale-105">
-              <MessageCircle size={15} /> WhatsApp
-            </a>
+            <CallToFormButton variant="call" id="taxi-call-btn" />
+            <CallToFormButton variant="whatsapp" id="taxi-wa-btn" />
           </div>
         </div>
       </section>
@@ -79,12 +76,6 @@ export default function TaxiPage() {
         </div>
       </section>
 
-      <footer className="bg-[#0a0a0a] border-t border-[#c9a84c]/20 py-8">
-        <div className="container-xl text-center text-gray-500 text-sm">
-          <Link href="/" className="text-[#c9a84c] hover:text-[#e8c97a]">← Back to Home</Link>
-          <span className="mx-3">·</span> © {new Date().getFullYear()} Goa Elite Experience
-        </div>
-      </footer>
     </>
   )
 }

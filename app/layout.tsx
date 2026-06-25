@@ -4,6 +4,7 @@ import './globals.css'
 import WhatsAppFloat from '@/app/components/WhatsAppFloat'
 import SchemaMarkup from '@/app/components/SchemaMarkup'
 import Analytics from '@/app/components/Analytics'
+import Footer from '@/app/components/Footer'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -68,6 +69,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#0a0a0a] text-white min-h-screen">
         {children}
+        <Footer />
         <WhatsAppFloat />
       </body>
     </html>

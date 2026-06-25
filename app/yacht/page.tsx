@@ -5,8 +5,9 @@ import BookingForm from '@/app/components/BookingForm'
 import FAQ from '@/app/components/FAQ'
 import FleetGallery from '@/app/components/FleetGallery'
 import Image from 'next/image'
-import { CheckCircle, Phone, MessageCircle, Cake, Heart, Briefcase, Anchor } from 'lucide-react'
+import { CheckCircle, Cake, Heart, Briefcase, Anchor } from 'lucide-react'
 import Link from 'next/link'
+import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
   title: pageSEO.yacht.title,
@@ -47,6 +48,7 @@ const yachtPackages = [
     capacity: 'Up to 10 guests',
     price: '₹8,000',
     per: 'per hour',
+    image: 'https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&q=80&w=1200',
     includes: ['Dedicated captain & crew', 'Welcome drinks', 'Snacks platter', 'Safety equipment', 'Bluetooth music system'],
   },
   {
@@ -54,6 +56,7 @@ const yachtPackages = [
     capacity: 'Up to 20 guests',
     price: '₹15,000',
     per: 'per hour',
+    image: 'https://images.unsplash.com/photo-1559599189-fe84dea4eb79?auto=format&fit=crop&q=80&w=1200',
     includes: ['Experienced crew', 'Welcome champagne', 'Premium snacks & starters', 'Decoration (on request)', 'Bluetooth music', 'Fishing gear available'],
   },
   {
@@ -61,6 +64,7 @@ const yachtPackages = [
     capacity: 'Up to 40 guests',
     price: '₹25,000',
     per: 'per hour',
+    image: 'https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&q=80&w=1200',
     includes: ['Full crew team', 'Customizable menu', 'Full decoration setup', 'Live DJ (on request)', 'Dolphin spotting route', 'Photography assistance'],
   },
 ]
@@ -82,7 +86,7 @@ export default function YachtPage() {
       {/* Hero */}
       <section className="relative pt-16 min-h-[65vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/yacht-deck.jpg" alt="Luxury Yacht Goa" fill priority className="object-cover" sizes="100vw" />
+          <Image src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&q=80&w=1600" alt="Luxury Yacht Goa" fill priority className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
         </div>
         <div className="relative z-10 container-xl py-20">
@@ -98,12 +102,8 @@ export default function YachtPage() {
             Birthday parties · Proposals · Corporate events · Island hopping · Dolphin watching. Fully customizable experiences on the Arabian Sea.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="tel:+918084676664" className="flex items-center gap-2 bg-[#c9a84c] text-black px-6 py-3 rounded-full font-bold text-sm hover:bg-[#e8c97a] transition-all hover:scale-105">
-              <Phone size={15} /> Call to Book
-            </a>
-            <a href="https://wa.me/918084676664" target="_blank" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all hover:scale-105">
-              <MessageCircle size={15} /> WhatsApp
-            </a>
+            <CallToFormButton variant="call" label="Call to Book" id="yacht-call-btn" />
+            <CallToFormButton variant="whatsapp" id="yacht-wa-btn" />
           </div>
         </div>
       </section>
@@ -142,28 +142,33 @@ export default function YachtPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {yachtPackages.map((pkg) => (
-              <div key={pkg.name} className="glass-dark rounded-2xl p-7 border border-[#c9a84c]/20 hover:border-[#c9a84c]/60 transition-colors flex flex-col">
-                <h3 className="font-playfair text-2xl font-bold text-[#c9a84c] mb-1">{pkg.name}</h3>
-                <p className="text-gray-400 text-sm mb-4">👥 {pkg.capacity}</p>
-                <div className="mb-6">
-                  <span className="font-playfair text-3xl font-bold text-white">{pkg.price}</span>
-                  <span className="text-gray-400 text-sm ml-2">{pkg.per}</span>
+              <div key={pkg.name} className="glass-dark rounded-2xl overflow-hidden border border-[#c9a84c]/20 hover:border-[#c9a84c]/60 transition-colors flex flex-col group">
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image src={pkg.image} alt={pkg.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  <h3 className="absolute bottom-4 left-6 font-playfair text-2xl font-bold text-white">{pkg.name}</h3>
+                  <span className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm border border-[#c9a84c]/50 text-[#c9a84c] text-xs font-bold px-3 py-1.5 rounded-full">
+                    👥 {pkg.capacity}
+                  </span>
                 </div>
-                <ul className="space-y-2.5 mb-8 flex-1">
-                  {pkg.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-300">
-                      <CheckCircle size={14} className="text-[#c9a84c] shrink-0 mt-0.5" /> {item}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={`https://wa.me/918084676664?text=${encodeURIComponent(`I'm interested in the ${pkg.name} (${pkg.capacity}, ${pkg.price}/hr). Please share availability.`)}`}
-                  target="_blank"
-                  id={`yacht-book-${pkg.name.toLowerCase().replace(/ /g, '-')}`}
-                  className="block w-full gold-gradient text-black font-bold py-3.5 rounded-xl text-center text-sm hover:opacity-90 transition-all hover:scale-[1.02]"
-                >
-                  Enquire About {pkg.name} →
-                </a>
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="mb-6">
+                    <span className="font-playfair text-3xl font-bold text-[#c9a84c]">{pkg.price}</span>
+                    <span className="text-gray-400 text-sm ml-2">{pkg.per}</span>
+                  </div>
+                  <ul className="space-y-2.5 mb-8 flex-1">
+                    {pkg.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-gray-300">
+                        <CheckCircle size={14} className="text-[#c9a84c] shrink-0 mt-0.5" /> {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <CallToFormButton
+                    variant="book"
+                    id={`yacht-book-${pkg.name.toLowerCase().replace(/ /g, '-')}`}
+                    label={`Enquire About ${pkg.name} →`}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -201,13 +206,6 @@ export default function YachtPage() {
         </div>
       </section>
 
-      <footer className="bg-[#0a0a0a] border-t border-[#c9a84c]/20 py-8">
-        <div className="container-xl text-center text-gray-500 text-sm">
-          <Link href="/" className="text-[#c9a84c] hover:text-[#e8c97a]">← Back to Home</Link>
-          <span className="mx-3">·</span>
-          © {new Date().getFullYear()} Goa Elite Experience
-        </div>
-      </footer>
     </>
   )
 }

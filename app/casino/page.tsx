@@ -4,8 +4,9 @@ import Navbar from '@/app/components/Navbar'
 import BookingForm from '@/app/components/BookingForm'
 import FAQ from '@/app/components/FAQ'
 import Image from 'next/image'
-import { CheckCircle, Phone, MessageCircle, Clock, Users, Shield, Shirt } from 'lucide-react'
+import { CheckCircle, Clock, Users, Shield, Shirt } from 'lucide-react'
 import Link from 'next/link'
+import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
   title: pageSEO.casino.title,
@@ -131,12 +132,8 @@ export default function CasinoPage() {
             Casino Pride · Deltin Royale · Big Daddy Casino — All packages include chips, buffet & drinks. Best prices guaranteed.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="tel:+918084676664" className="flex items-center gap-2 bg-[#c9a84c] text-black px-6 py-3 rounded-full font-bold text-sm hover:bg-[#e8c97a] transition-all hover:scale-105">
-              <Phone size={15} /> Call to Book
-            </a>
-            <a href="https://wa.me/918084676664" target="_blank" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-all hover:scale-105">
-              <MessageCircle size={15} /> WhatsApp
-            </a>
+            <CallToFormButton variant="call" label="Call to Book" id="casino-call-btn" />
+            <CallToFormButton variant="whatsapp" id="casino-wa-btn" />
           </div>
         </div>
       </section>
@@ -176,14 +173,11 @@ export default function CasinoPage() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={`https://wa.me/918084676664?text=${encodeURIComponent(pkg.waMsg)}`}
-                  target="_blank"
+                <CallToFormButton
+                  variant="book"
                   id={`casino-book-${pkg.name.toLowerCase().replace(/ /g, '-')}`}
-                  className="w-full gold-gradient text-black font-bold py-3.5 rounded-xl text-center text-sm hover:opacity-90 transition-all hover:scale-[1.02] block"
-                >
-                  Book {pkg.name} →
-                </a>
+                  label={`Book ${pkg.name} →`}
+                />
               </div>
             ))}
           </div>
@@ -232,14 +226,6 @@ export default function CasinoPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#0a0a0a] border-t border-[#c9a84c]/20 py-8">
-        <div className="container-xl text-center text-gray-500 text-sm">
-          <Link href="/" className="text-[#c9a84c] hover:text-[#e8c97a]">← Back to Home</Link>
-          <span className="mx-3">·</span>
-          © {new Date().getFullYear()} Goa Elite Experience
-        </div>
-      </footer>
     </>
   )
 }
