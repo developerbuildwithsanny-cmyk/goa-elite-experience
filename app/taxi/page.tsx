@@ -3,7 +3,7 @@ import { pageSEO } from '@/app/lib/seo'
 import Navbar from '@/app/components/Navbar'
 import BookingForm from '@/app/components/BookingForm'
 import { Plane, MapPin, Clock, Star } from 'lucide-react'
-import Link from 'next/link'
+import Image from 'next/image'
 import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
@@ -24,17 +24,24 @@ export default function TaxiPage() {
     <>
       <Navbar />
 
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#111] to-[#0a0a0a]">
-        <div className="container-xl text-center">
-          <p className="text-[#c9a84c] text-xs font-bold tracking-[0.25em] uppercase mb-4">Goa Taxi Service</p>
-          <h1 className="font-playfair text-4xl lg:text-5xl font-bold leading-tight mb-4">
+      {/* Hero */}
+      <section className="relative pt-16 min-h-[60vh] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/taxi-hero.jpg" alt="Taxi Service in Goa" fill priority className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/50" />
+        </div>
+        <div className="relative z-10 container-xl py-20 text-center lg:text-left">
+          <p className="text-[#c9a84c] text-xs font-bold tracking-[0.25em] uppercase mb-4 flex items-center gap-2 justify-center lg:justify-start">
+            <span className="w-8 h-px bg-[#c9a84c]" /> Goa Taxi Service
+          </p>
+          <h1 className="font-playfair text-4xl lg:text-5xl font-bold leading-tight mb-4 max-w-2xl">
             Reliable Taxi Service in{' '}
             <span className="gold-text-gradient">Goa</span>
           </h1>
-          <p className="text-gray-300 text-lg max-w-xl mx-auto mb-8">
+          <p className="text-gray-300 text-lg max-w-xl mb-8">
             Airport transfers, sightseeing tours, outstation trips & hourly rentals. AC cabs available 24/7 with experienced local drivers.
           </p>
-          <div className="flex gap-4 flex-wrap justify-center">
+          <div className="flex gap-4 flex-wrap">
             <CallToFormButton variant="call" id="taxi-call-btn" />
             <CallToFormButton variant="whatsapp" id="taxi-wa-btn" />
           </div>

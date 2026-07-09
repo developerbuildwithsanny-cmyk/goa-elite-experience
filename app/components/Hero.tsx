@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 container-xl pt-28 pb-20 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left — Copy */}
+        {/* Left */}
         <motion.div
           initial={{ opacity: 0, x: -48 }}
           animate={{ opacity: 1, x: 0 }}

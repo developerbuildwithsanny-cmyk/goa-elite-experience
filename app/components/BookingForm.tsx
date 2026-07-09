@@ -19,6 +19,11 @@ const schema = z.object({
     .optional()
     .or(z.literal('')),
   service: z.string().min(1, 'Please select a service'),
+  travel_date: z.string().optional(),
+  group_size: z
+    .string()
+    .optional()
+    .refine((v) => !v || (Number(v) >= 1 && Number(v) <= 500), 'Enter a valid group size'),
   message: z.string().optional(),
 })
 
@@ -35,6 +40,8 @@ function formatWhatsAppMessage(data: FormData): string {
       `📱 Phone: ${data.phone}\n` +
       (data.alt_phone ? `📱 Alt: ${data.alt_phone}\n` : '') +
       `🎯 Service: ${data.service}\n` +
+      (data.travel_date ? `📅 Travel Date: ${data.travel_date}\n` : '') +
+      (data.group_size ? `👥 Group Size: ${data.group_size}\n` : '') +
       (data.message ? `💬 Message: ${data.message}\n` : '') +
       `━━━━━━━━━━━━━━━━━\n` +
       `Please confirm availability.`
@@ -79,6 +86,8 @@ export default function BookingForm({
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             ...data,
+            group_size: data.group_size ? Number(data.group_size) : null,
+            travel_date: data.travel_date || null,
             source: 'website_form',
             status: 'new',
           }),
@@ -171,6 +180,35 @@ export default function BookingForm({
               inputMode="numeric"
               className="input-dark"
             />
+          </div>
+        </div>
+
+        {/* Travel Date + Group Size */}
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <input
+              {...register('travel_date')}
+              id="booking-travel-date"
+              type="date"
+              className="input-dark"
+              min={new Date().toISOString().split('T')[0]}
+            />
+            <p className="text-gray-500 text-xs mt-1">Travel Date (optional)</p>
+          </div>
+          <div>
+            <input
+              {...register('group_size')}
+              id="booking-group-size"
+              type="number"
+              placeholder="No. of people"
+              min={1}
+              max={500}
+              inputMode="numeric"
+              className="input-dark"
+            />
+            {errors.group_size && (
+              <p className="text-red-400 text-xs mt-1">{errors.group_size.message}</p>
+            )}
           </div>
         </div>
 

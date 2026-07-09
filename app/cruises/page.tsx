@@ -5,7 +5,6 @@ import BookingForm from '@/app/components/BookingForm'
 import FAQ from '@/app/components/FAQ'
 import Image from 'next/image'
 import { CheckCircle, Music, Utensils, Sun, Users } from 'lucide-react'
-import Link from 'next/link'
 import CallToFormButton from '@/app/components/CallToFormButton'
 
 export const metadata: Metadata = {
@@ -46,7 +45,7 @@ const cruises = [
     includes: ['2 complimentary drinks', 'DJ music all night', 'Dance floor on deck', 'Snacks included'],
     badge: 'Party Favorite',
     service: 'Party Cruise',
-    image: 'https://images.unsplash.com/photo-1593693411762-b91c1097e3ab?auto=format&fit=crop&w=600&q=80',
+    image: '/images/party-cruise.jpg',
   },
   {
     name: 'Family Cruise',

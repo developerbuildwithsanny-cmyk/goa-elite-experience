@@ -67,6 +67,7 @@ export default function Navbar() {
           <button
             id="navbar-call-btn"
             onClick={handleCallClick}
+            suppressHydrationWarning
             className="flex items-center gap-1.5 bg-[#c9a84c] text-black px-4 py-2 
                        rounded-full text-sm font-bold hover:bg-[#e8c97a] transition-all
                        hover:scale-105 shrink-0"
@@ -81,6 +82,7 @@ export default function Navbar() {
             id="navbar-mobile-call"
             onClick={handleCallClick}
             aria-label="Call us"
+            suppressHydrationWarning
             className="flex items-center gap-1.5 bg-[#c9a84c] text-black px-3 py-1.5 
                        rounded-full text-xs font-bold hover:bg-[#e8c97a] transition-all"
           >
@@ -90,6 +92,7 @@ export default function Navbar() {
             id="navbar-hamburger"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
+            suppressHydrationWarning
             className="text-[#c9a84c] p-1"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -114,6 +117,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={handleCallClick}
+            suppressHydrationWarning
             className="flex items-center gap-2 bg-[#c9a84c] text-black px-4 py-2.5 
                        rounded-full text-sm font-bold w-fit mt-3"
           >
