@@ -57,6 +57,16 @@ export async function POST(request: Request) {
       return Response.json({ success: true, id: null, note: 'Supabase not configured' })
     }
 
+    const extraInfo: string[] = []
+    if (travel_date) extraInfo.push(`Travel Date: ${travel_date}`)
+    if (group_size) extraInfo.push(`Group Size: ${group_size}`)
+
+    let finalMessage = message ? String(message).trim() : ''
+    if (extraInfo.length > 0) {
+      const prefix = `[${extraInfo.join(' | ')}]`
+      finalMessage = finalMessage ? `${prefix} ${finalMessage}` : prefix
+    }
+
     const { data, error } = await admin
       .from('leads')
       .insert([
@@ -65,9 +75,7 @@ export async function POST(request: Request) {
           phone,
           alt_phone: alt_phone || null,
           service,
-          message: message || null,
-          travel_date: travel_date || null,
-          group_size: group_size || null,
+          message: finalMessage || null,
           source: source || 'website_form',
           status: 'new',
         },
