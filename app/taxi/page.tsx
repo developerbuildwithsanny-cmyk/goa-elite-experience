@@ -5,12 +5,10 @@ import BookingForm from '@/app/components/BookingForm'
 import { Plane, MapPin, Clock, Star } from 'lucide-react'
 import Image from 'next/image'
 import CallToFormButton from '@/app/components/CallToFormButton'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.taxi.title,
-  description: pageSEO.taxi.description,
-  keywords: pageSEO.taxi.keywords,
-}
+export const metadata = generatePageMetadata('taxi')
+
 
 const services = [
   { title: 'Airport Transfer', desc: 'Reliable AC cab pickup & drop at Dabolim (GOI) & Mopa (GOX). Fixed rates, no surprises.', price: 'From ₹800', icon: Plane },

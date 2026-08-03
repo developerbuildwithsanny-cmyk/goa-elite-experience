@@ -5,12 +5,10 @@ import BookingForm from '@/app/components/BookingForm'
 import { Phone, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import CallToFormButton from '@/app/components/CallToFormButton'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.contact.title,
-  description: pageSEO.contact.description,
-  keywords: pageSEO.contact.keywords,
-}
+export const metadata = generatePageMetadata('contact')
+
 
 export default function ContactPage() {
   return (

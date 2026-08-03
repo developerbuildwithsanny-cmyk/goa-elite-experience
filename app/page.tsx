@@ -9,12 +9,9 @@ import { Ship, Anchor, Car, MapPin, Building2, Waves, ArrowRight, Users, Star, C
 import Link from 'next/link'
 import Image from 'next/image'
 import CallToFormButton from '@/app/components/CallToFormButton'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.home.title,
-  description: pageSEO.home.description,
-  keywords: pageSEO.home.keywords,
-}
+export const metadata = generatePageMetadata('yacht')
 
 const services = [
   {

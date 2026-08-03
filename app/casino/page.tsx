@@ -7,12 +7,9 @@ import Image from 'next/image'
 import { CheckCircle, Clock, Users, Shield, Shirt } from 'lucide-react'
 import Link from 'next/link'
 import CallToFormButton from '@/app/components/CallToFormButton'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.casino.title,
-  description: pageSEO.casino.description,
-  keywords: pageSEO.casino.keywords,
-}
+export const metadata = generatePageMetadata('casino')
 
 const packages = [
   {

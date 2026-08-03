@@ -3,12 +3,10 @@ import { pageSEO } from '@/app/lib/seo'
 import Navbar from '@/app/components/Navbar'
 import Link from 'next/link'
 import { ArrowRight, Clock } from 'lucide-react'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.blog.title,
-  description: pageSEO.blog.description,
-  keywords: pageSEO.blog.keywords,
-}
+export const metadata = generatePageMetadata('blog')
+
 
 const posts = [
   {

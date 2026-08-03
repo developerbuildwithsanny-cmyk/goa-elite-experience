@@ -6,12 +6,9 @@ import FAQ from '@/app/components/FAQ'
 import Image from 'next/image'
 import { CheckCircle, Music, Utensils, Sun, Users } from 'lucide-react'
 import CallToFormButton from '@/app/components/CallToFormButton'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.cruises.title,
-  description: pageSEO.cruises.description,
-  keywords: pageSEO.cruises.keywords,
-}
+export const metadata = generatePageMetadata('cruises')
 
 const cruises = [
   {

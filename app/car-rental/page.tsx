@@ -6,12 +6,10 @@ import Image from 'next/image'
 import { Key, User, MapPin, Clock } from 'lucide-react'
 import Link from 'next/link'
 import CallToFormButton from '@/app/components/CallToFormButton'
+import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata: Metadata = {
-  title: pageSEO.carRental.title,
-  description: pageSEO.carRental.description,
-  keywords: pageSEO.carRental.keywords,
-}
+export const metadata = generatePageMetadata('car-rental')
+
 
 const cars = [
   { type: 'Economy', examples: 'Wagon R, Swift, Alto', price: '₹800/day', seats: 5, note: 'Best for budget travel' },
