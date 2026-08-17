@@ -60,31 +60,31 @@ const services = [
 
 const experiences = [
   {
-    title: 'Casino Pride Package',
+    title: 'Casino Entry & Packages',
     image: '/images/casino-interior.jpg',
-    price: '₹1,500',
-    includes: '1500 chips + Unlimited Buffet + 1 Drink',
+    price: '₹1,000',
+    includes: 'Chips included + Buffet + Drinks (Starts from ₹1,000)',
     href: '/casino',
   },
   {
     title: 'Mandovi Sunset Cruise',
     image: '/images/cruise-mandovi.jpg',
-    price: '₹799',
-    includes: 'Live Music + Drinks + Snacks',
+    price: '₹399',
+    includes: 'Live Music + Goan Dance + Drinks & Snacks (Regular ₹499)',
     href: '/cruises',
   },
   {
-    title: 'Private Yacht Charter',
+    title: 'Private Boat / Yacht Charter',
     image: '/images/yacht-deck.jpg',
-    price: '₹8,000/hr',
-    includes: 'Dedicated Crew + Welcome Drinks + Snacks',
+    price: '₹1,099',
+    includes: 'Private speedboat & luxury charters (Starts from ₹1,099)',
     href: '/yacht',
   },
   {
     title: 'Dolphin Watching Trip',
     image: '/images/fleet/sea-eagle/IMG-20250903-WA0057(1).jpg',
-    price: '₹400',
-    includes: 'Dolphin Sightings + Landmark Views + Kids Below 5 Free',
+    price: '₹349',
+    includes: 'Dolphin Sightings + Coastline Landmark Views (Regular ₹400)',
     href: '/cruises',
   },
 ]

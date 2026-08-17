@@ -14,7 +14,8 @@ const cruises = [
   {
     name: 'Sunset Cruise',
     duration: '1.5 Hours',
-    price: '₹799',
+    price: '₹399',
+    originalPrice: '₹499',
     per: 'per person',
     desc: 'Watch the golden sun dip below the horizon on Mandovi River with live Goan music, drinks and snacks.',
     includes: ['Welcome drink', 'Goan snacks platter', 'Live folk music & dance', 'Stunning sunset views'],
@@ -25,7 +26,8 @@ const cruises = [
   {
     name: 'Dinner Cruise',
     duration: '2.5 Hours',
-    price: '₹1,499',
+    price: '₹999',
+    originalPrice: '₹1,499',
     per: 'per person',
     desc: 'Dine under the stars on a floating restaurant with live entertainment on the scenic Mandovi River.',
     includes: ['Welcome drink', 'Full dinner buffet', 'Live music & cultural show', 'River views', 'Dessert included'],
@@ -78,7 +80,8 @@ const cruises = [
   {
     name: 'Dolphin Watching Trip',
     duration: '1 Hour',
-    price: '₹400',
+    price: '₹349',
+    originalPrice: '₹400',
     per: 'per person',
     desc: "Glide along Goa's scenic coastline on a one-hour dolphin spotting adventure. Watch wild dolphins leap and play while passing iconic landmarks — Reis Magos Fort, Aguada Lighthouse, the historic Aguada Jail, Gurudwara Temple, and Jimmy Palace.",
     includes: [
@@ -177,7 +180,12 @@ export default function CruisesPage() {
                       <p className="text-gray-400 text-sm mt-0.5">⏱ {c.duration}</p>
                     </div>
                     <div className="text-right shrink-0">
-                      <span className="font-playfair text-2xl font-bold text-[#c9a84c]">{c.price}</span>
+                      <div className="flex items-center gap-1.5 justify-end">
+                        {('originalPrice' in c) && c.originalPrice && (
+                          <span className="text-gray-500 line-through text-xs">{c.originalPrice}</span>
+                        )}
+                        <span className="font-playfair text-2xl font-bold text-[#c9a84c]">{c.price}</span>
+                      </div>
                       <p className="text-gray-500 text-xs">{c.per}</p>
                     </div>
                   </div>

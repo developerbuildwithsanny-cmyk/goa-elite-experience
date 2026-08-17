@@ -44,6 +44,15 @@ const occasions = [
 
 const yachtPackages = [
   {
+    name: 'Leisure Boat / Speedboat',
+    capacity: 'Up to 6 guests',
+    price: '₹1,099',
+    per: 'per person',
+    originalPrice: '₹1,199',
+    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=1200',
+    includes: ['Private leisure boat charter', 'Perfect for small groups of 6', 'Scenic sightseeing & speed run', 'Dolphin spotting (morning hours)', 'Life jackets & safety equipment', 'Bluetooth music system on board'],
+  },
+  {
     name: 'Standard Yacht',
     capacity: 'Up to 10 guests',
     price: '₹8,000',
@@ -140,7 +149,7 @@ export default function YachtPage() {
             <h2 className="font-playfair text-3xl lg:text-4xl font-bold">Yacht Packages</h2>
             <div className="gold-divider mt-4" />
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {yachtPackages.map((pkg) => (
               <div key={pkg.name} className="glass-dark rounded-2xl overflow-hidden border border-[#c9a84c]/20 hover:border-[#c9a84c]/60 transition-colors flex flex-col group">
                 <div className="relative h-56 w-full overflow-hidden">
@@ -152,9 +161,12 @@ export default function YachtPage() {
                   </span>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="mb-6">
+                  <div className="mb-6 flex items-baseline flex-wrap gap-2">
+                    {('originalPrice' in pkg) && pkg.originalPrice && (
+                      <span className="text-gray-500 line-through text-sm">{pkg.originalPrice}</span>
+                    )}
                     <span className="font-playfair text-3xl font-bold text-[#c9a84c]">{pkg.price}</span>
-                    <span className="text-gray-400 text-sm ml-2">{pkg.per}</span>
+                    <span className="text-gray-400 text-sm">{pkg.per}</span>
                   </div>
                   <ul className="space-y-2.5 mb-8 flex-1">
                     {pkg.includes.map((item) => (

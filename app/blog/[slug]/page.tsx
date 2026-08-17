@@ -33,13 +33,20 @@ The gaming floor is well-organized with a mix of classic table games (Roulette, 
 **Best for:** First-timers, couples, groups seeking value.
 
 ## Deltin Royale — Premium Floating Casino
-**Entry: ₹2,500 per person**
+**Entry: ₹3,000 for Ladies (with ₹1,000 chips) / ₹4,500 for Gents (with ₹2,000 chips)**
 
-Deltin Royale is India's largest floating casino and arguably the most prestigious. The ₹2,500 package includes chips, a premium buffet with live counters, two complimentary drinks, live entertainment, and a short cruise experience.
+Deltin Royale is India's largest floating casino and arguably the most prestigious. The package includes premium buffet with live counters, unlimited drinks, live entertainment, and a short cruise experience.
 
 The gaming floor spans multiple levels with over 100+ gaming positions including a dedicated high-roller area. The service is impeccable — you'll feel the difference the moment you step aboard.
 
 **Best for:** Special occasions, high-rollers, those who want the complete Goa casino experience.
+
+## Deltin Jaqk — Classic Floating Casino
+**Entry: ₹2,500 per person (with ₹1,000 chips)**
+
+Deltin Jaqk offers a fantastic gaming environment with a dedicated VIP room and a wide selection of slots and table games. The package includes ₹1,000 worth of OTPC chips, a delicious dinner buffet, and live gaming entertainment.
+
+**Best for:** Avid players seeking standard floating gaming, groups.
 
 ## Big Daddy Casino — Budget Friendly
 **Entry: ₹1,000 per person**
@@ -49,7 +56,7 @@ Big Daddy is ideal for those who want a casino experience without breaking the b
 **Best for:** Budget-conscious travellers, large groups.
 
 ## Our Recommendation
-For a first visit, we recommend **Casino Pride** — best value, great atmosphere, and hassle-free booking. For a special occasion, splurge on **Deltin Royale**.
+For a first visit, we recommend **Casino Pride** — best value, great atmosphere, and hassle-free booking. For a premium experience, choose **Deltin Royale** or **Deltin Jaqk**.
 
 Ready to book? Fill the form below and we'll confirm your casino package within 30 minutes!
     `,
@@ -67,14 +74,14 @@ The Mandovi River cruises are one of Goa's most beloved experiences — and for 
 ## Types of Mandovi River Cruises
 
 ### Sunset Cruise (Most Popular)
-**Duration:** 1.5 hours | **Price:** ₹799/person
+**Duration:** 1.5 hours | **Price:** ₹399/person (Regular: ₹499)
 
 The sunset cruise is the crown jewel of Goa experiences. Departing around 6–7 PM, the cruise catches Goa's famous golden hour — warm orange skies reflecting on the calm river. Includes: welcome drink, Goan snacks, and live folk music with traditional dance performances.
 
 **Tip:** Book weekday slots for a more peaceful experience. Weekends fill up fast!
 
 ### Dinner Cruise (Most Luxurious)
-**Duration:** 2.5 hours | **Price:** ₹1,499/person
+**Duration:** 2.5 hours | **Price:** ₹999/person (Regular: ₹1,499)
 
 A floating restaurant experience under the stars. Full dinner buffet with Goan, Indian, and continental options. Live music and cultural shows throughout the evening. This is the go-to choice for couples and celebrations.
 

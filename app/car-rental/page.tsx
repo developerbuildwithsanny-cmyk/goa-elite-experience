@@ -12,10 +12,10 @@ export const metadata = generatePageMetadata('car-rental')
 
 
 const cars = [
-  { type: 'Economy', examples: 'Wagon R, Swift, Alto', price: '₹800/day', seats: 5, note: 'Best for budget travel' },
+  { type: 'Baleno / Swift MT', examples: 'Manual Transmission, AC', price: '₹1,200/day', seats: 5, note: 'Best for self-drive budget travel' },
+  { type: 'Baleno / Swift AT', examples: 'Automatic Transmission, AC', price: '₹1,500/day', seats: 5, note: 'Hassle-free automatic city driving' },
   { type: 'SUV', examples: 'Innova Crysta, Ertiga', price: '₹2,000/day', seats: 7, note: 'Family & group travel' },
-  { type: 'Sedan', examples: 'Honda City, Ciaz', price: '₹1,500/day', seats: 5, note: 'Comfortable city travel' },
-  { type: 'Luxury SUV', examples: 'Toyota Fortuner, MG Hector', price: '₹4,000/day', seats: 7, note: 'Premium experience' },
+  { type: 'Luxury SUV', examples: 'Toyota Fortuner, MG Hector', price: '₹4,000/day', seats: 7, note: 'Premium executive experience' },
 ]
 
 export default function CarRentalPage() {

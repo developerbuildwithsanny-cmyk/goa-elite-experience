@@ -31,19 +31,35 @@ const packages = [
   {
     name: 'Deltin Royale',
     subtitle: 'Floating Casino · Premium',
-    price: '₹2,500',
-    priceNote: 'per person',
+    price: '₹3,000 / ₹4,500',
+    priceNote: 'Ladies / Gents',
     includes: [
-      '₹2,500 casino chips',
+      'Gents: ₹4,500 (with ₹2,000 OTPC chips)',
+      'Ladies: ₹3,000 (with ₹1,000 OTPC chips)',
       'Premium buffet dinner',
       '2 complimentary drinks',
-      'Cruise experience included',
-      'Live entertainment',
+      'Live entertainment & shows',
       'Dress code: Smart casual',
     ],
     badge: 'Premium',
     badgeColor: 'bg-purple-600 text-white',
     waMsg: 'I want to book the Deltin Royale package. Please share availability and details.',
+  },
+  {
+    name: 'Deltin Jaqk',
+    subtitle: 'Floating Casino · Classic',
+    price: '₹2,500',
+    priceNote: 'with ₹1,000 chips',
+    includes: [
+      '₹2,500 entry fee per person',
+      '₹1,000 OTPC chips included',
+      'Buffet dinner & drinks',
+      'Live gaming & entertainment',
+      'Dress code: Smart casual',
+    ],
+    badge: 'Classic',
+    badgeColor: 'bg-emerald-600 text-white',
+    waMsg: 'I want to book the Deltin Jaqk package. Please share availability and details.',
   },
   {
     name: 'Big Daddy Casino',
@@ -148,7 +164,7 @@ export default function CasinoPage() {
             <div className="gold-divider mt-4" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {packages.map((pkg) => (
               <div key={pkg.name} className="glass-dark rounded-2xl p-7 border border-[#c9a84c]/20 hover:border-[#c9a84c]/60 transition-colors relative flex flex-col">
                 <span className={`absolute top-4 right-4 ${pkg.badgeColor} text-xs font-bold px-2.5 py-1 rounded-full`}>
