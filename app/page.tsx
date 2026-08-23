@@ -11,7 +11,7 @@ import Image from 'next/image'
 import CallToFormButton from '@/app/components/CallToFormButton'
 import { generatePageMetadata } from '@/app/lib/seo-metadata'
 
-export const metadata = generatePageMetadata('yacht')
+export const metadata = generatePageMetadata('home')
 
 const services = [
   {
@@ -70,14 +70,14 @@ const experiences = [
     title: 'Mandovi Sunset Cruise',
     image: '/images/cruise-mandovi.jpg',
     price: '₹399',
-    includes: 'Live Music + Goan Dance + Drinks & Snacks (Regular ₹499)',
+    includes: 'Live Music + Goan Dance + Sunset Views (Duration: 1 Hour)',
     href: '/cruises',
   },
   {
     title: 'Private Boat / Yacht Charter',
     image: '/images/yacht-deck.jpg',
-    price: '₹1,099',
-    includes: 'Private speedboat & luxury charters (Starts from ₹1,099)',
+    price: '₹8,000*',
+    includes: 'Private speedboat & luxury charters (Starts from ₹8,000*/hr)',
     href: '/yacht',
   },
   {
@@ -105,7 +105,7 @@ const homeFAQ = [
   {
     question: 'What is included in the sunset cruise?',
     answer:
-      'Our sunset cruise on Mandovi River includes live music, welcome drinks, snacks, and a stunning golden hour view. Duration is approximately 1.5 hours departing from Panjim Jetty.',
+      'Our sunset cruise on Mandovi River includes live music, Goan dance, and a stunning golden hour view. Duration is 1 hour departing from Panjim Jetty (no food or drinks included).',
   },
   {
     question: 'Can I charter a private yacht for a birthday party?',

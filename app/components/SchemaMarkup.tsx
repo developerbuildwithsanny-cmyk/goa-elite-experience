@@ -6,7 +6,7 @@ export default function SchemaMarkup() {
     description:
       'Premium casino booking, luxury yacht rentals, and boat cruises in Goa',
     url: 'https://goaeliteexperience.com',
-    telephone: '+91-8084676664',
+    telephone: '+91-7823077816',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Panjim',
@@ -27,7 +27,7 @@ export default function SchemaMarkup() {
       ratingValue: '4.9',
       reviewCount: '127',
     },
-    sameAs: ['https://wa.me/918084676664'],
+    sameAs: ['https://wa.me/917823077816'],
   }
 
   return (

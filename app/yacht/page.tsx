@@ -42,14 +42,23 @@ const occasions = [
   },
 ]
 
-const yachtPackages = [
+interface YachtPackage {
+  name: string
+  capacity: string
+  price: string
+  per: string
+  originalPrice?: string
+  image: string
+  includes: string[]
+}
+
+const yachtPackages: YachtPackage[] = [
   {
     name: 'Leisure Boat / Speedboat',
     capacity: 'Up to 6 guests',
-    price: '₹1,099',
-    per: 'per person',
-    originalPrice: '₹1,199',
-    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=1200',
+    price: '₹8,000*',
+    per: 'per hour',
+    image: '/images/leisure-boat-india.jpg',
     includes: ['Private leisure boat charter', 'Perfect for small groups of 6', 'Scenic sightseeing & speed run', 'Dolphin spotting (morning hours)', 'Life jackets & safety equipment', 'Bluetooth music system on board'],
   },
   {
@@ -162,7 +171,7 @@ export default function YachtPage() {
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="mb-6 flex items-baseline flex-wrap gap-2">
-                    {('originalPrice' in pkg) && pkg.originalPrice && (
+                    {pkg.originalPrice && (
                       <span className="text-gray-500 line-through text-sm">{pkg.originalPrice}</span>
                     )}
                     <span className="font-playfair text-3xl font-bold text-[#c9a84c]">{pkg.price}</span>

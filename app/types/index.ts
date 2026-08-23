@@ -47,7 +47,7 @@ export const SERVICES = [
   'Casino Booking',
   'Sunset Cruise',
   'Dinner Cruise',
-  'Party Cruise',
+  'Vibaan Party Cruise',
   'Family Cruise',
   'Private Yacht Charter',
   'Birthday Party Yacht',

@@ -79,7 +79,7 @@ export default function Footer() {
               Contact
             </h5>
             <div className="space-y-3 text-gray-400 text-sm">
-              <p>📞 +91 8084676664</p>
+              <p>📞 +91 7823077816</p>
               <p>📍 Panjim, Goa 403001</p>
               <p>🕐 Mon–Sun: 9 AM – 10 PM</p>
               <p className="pt-1">

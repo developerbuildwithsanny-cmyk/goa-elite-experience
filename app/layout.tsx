@@ -25,7 +25,7 @@ const playfair = Playfair_Display({
 //     template: '%s | Goa Elite Experience',
 //   },
 //   description:
-//     'Book premium casino packages, luxury yacht rentals, sunset cruises in Goa. Best prices, trusted local experts. Call +91 8084676664',
+//     'Book premium casino packages, luxury yacht rentals, sunset cruises in Goa. Best prices, trusted local experts. Call +91 7823077816',
 //   keywords: [
 //     'casino booking goa',
 //     'luxury yacht goa',

@@ -13,15 +13,15 @@ export const metadata = generatePageMetadata('cruises')
 const cruises = [
   {
     name: 'Sunset Cruise',
-    duration: '1.5 Hours',
+    duration: '1 Hour',
     price: '₹399',
     originalPrice: '₹499',
     per: 'per person',
-    desc: 'Watch the golden sun dip below the horizon on Mandovi River with live Goan music, drinks and snacks.',
-    includes: ['Welcome drink', 'Goan snacks platter', 'Live folk music & dance', 'Stunning sunset views'],
+    desc: 'Watch the golden sun dip below the horizon on Mandovi River with live Goan music and dance.',
+    includes: ['No food, No drinks', 'Live folk music & dance', 'Stunning sunset views', 'For more details call us'],
     badge: 'Best Seller',
     service: 'Sunset Cruise',
-    image: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80',
+    image: '/images/lexicon-sunset-cruise.jpg',
   },
   {
     name: 'Dinner Cruise',
@@ -33,7 +33,7 @@ const cruises = [
     includes: ['Welcome drink', 'Full dinner buffet', 'Live music & cultural show', 'River views', 'Dessert included'],
     badge: 'Most Luxurious',
     service: 'Dinner Cruise',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80',
+    image: '/images/lexicon-dinner-cruise.jpg',
   },
   {
     name: 'Party Cruise',
@@ -43,40 +43,40 @@ const cruises = [
     desc: 'DJ music, unlimited drinks and a vibrant party atmosphere on the Mandovi River at night.',
     includes: ['2 complimentary drinks', 'DJ music all night', 'Dance floor on deck', 'Snacks included'],
     badge: 'Party Favorite',
-    service: 'Party Cruise',
+    service: 'Vibaan Party Cruise',
     image: '/images/party-cruise.jpg',
   },
-  {
-    name: 'Family Cruise',
-    duration: '1.5 Hours',
-    price: '₹599',
-    per: 'per person',
-    desc: 'A calm, family-friendly cruise perfect for all ages with light music, snacks and river views.',
-    includes: ['Snacks & juice', 'Light Goan music', 'Kids friendly', 'River & bridge views'],
-    badge: null,
-    service: 'Family Cruise',
-    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    name: 'Island Adventure Cruise',
-    duration: 'Full Day',
-    price: '₹2,000',
-    per: 'per person',
-    desc: 'The ultimate Goan water adventure — an all-day island cruise packed with thrilling activities, great food, and non-stop entertainment on the open sea.',
-    includes: [
-      'Kayaking & sub-board fun',
-      'Jet ski ride',
-      'Banana boat & bumper ride',
-      'Swimming in open waters',
-      'Veg & non-veg buffet lunch',
-      '2 complimentary drinks',
-      'Live DJ on board',
-      'Pickup & drop included',
-    ],
-    badge: 'Adventure',
-    service: 'Island Adventure Cruise',
-    image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1600&q=80',
-  },
+  // {
+  //   name: 'Family Cruise',
+  //   duration: '1.5 Hours',
+  //   price: '₹599',
+  //   per: 'per person',
+  //   desc: 'A calm, family-friendly cruise perfect for all ages with light music, snacks and river views.',
+  //   includes: ['Snacks & juice', 'Light Goan music', 'Kids friendly', 'River & bridge views'],
+  //   badge: null,
+  //   service: 'Family Cruise',
+  //   image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80',
+  // },
+  // {
+  //   name: 'Island Adventure Cruise',
+  //   duration: 'Full Day',
+  //   price: '₹2,000',
+  //   per: 'per person',
+  //   desc: 'The ultimate Goan water adventure — an all-day island cruise packed with thrilling activities, great food, and non-stop entertainment on the open sea.',
+  //   includes: [
+  //     'Kayaking & sub-board fun',
+  //     'Jet ski ride',
+  //     'Banana boat & bumper ride',
+  //     'Swimming in open waters',
+  //     'Veg & non-veg buffet lunch',
+  //     '2 complimentary drinks',
+  //     'Live DJ on board',
+  //     'Pickup & drop included',
+  //   ],
+  //   badge: 'Adventure',
+  //   service: 'Island Adventure Cruise',
+  //   image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1600&q=80',
+  // },
   {
     name: 'Dolphin Watching Trip',
     duration: '1 Hour',
@@ -93,7 +93,7 @@ const cruises = [
     ],
     badge: null,
     service: 'Dolphin Watching',
-    image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80',
+    image: '/images/dolphin-cruise-pics.webp',
   },
 ]
 
@@ -112,7 +112,7 @@ const cruiseFAQ = [
   },
   {
     question: 'Is alcohol included in all cruise packages?',
-    answer: 'The dinner and party cruise packages include drinks. The sunset cruise includes 1 welcome drink. The family cruise provides juice and soft drinks. Additional drinks can be purchased on board.',
+    answer: 'The dinner and party cruise packages include drinks. The family cruise provides juice and soft drinks. The sunset cruise does not include food or drinks. Additional drinks can be purchased on board.',
   },
   {
     question: 'What happens if the cruise is cancelled due to weather?',
@@ -144,7 +144,7 @@ export default function CruisesPage() {
             <span className="gold-text-gradient">Mandovi River</span>
           </h1>
           <p className="text-gray-300 text-lg max-w-xl mb-8">
-            Sunset Cruise · Dinner Cruise · Party Cruise · Family Cruise — Live music, drinks & unforgettable views.
+            Sunset Cruise · Dinner Cruise · Vibaan Party Cruise · Family Cruise — Live music, drinks & unforgettable views.
           </p>
           <div className="flex gap-4 flex-wrap">
             <CallToFormButton variant="call" label="Call to Book" id="cruises-call-btn" />
@@ -216,7 +216,7 @@ export default function CruisesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: Music, title: 'Live Music', desc: 'Traditional Goan folk music and cultural dance performances.' },
-              { icon: Utensils, title: 'Food & Drinks', desc: 'Fresh Goan cuisine, snacks, and welcome drinks included.' },
+              { icon: Utensils, title: 'Food & Drinks', desc: 'Fresh Goan cuisine, snacks, and drinks included on select packages.' },
               { icon: Sun, title: 'Scenic Views', desc: 'Stunning Mandovi River sunset and Panjim city skyline.' },
               { icon: Users, title: 'Friendly Staff', desc: 'Trained crew ensures a safe, fun and memorable experience.' },
             ].map((f) => {
@@ -247,7 +247,7 @@ export default function CruisesPage() {
             </h2>
             <div className="gold-divider mt-4" />
             <p className="text-gray-400 text-sm mt-4 max-w-2xl mx-auto">
-              These are genuine golden-hour shots from our Sea Eagle yacht on the Mandovi River — no filters, no stock photos.
+              These are genuine golden-hour shots from our fleet on the Mandovi River — no filters, no stock photos.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -264,15 +264,15 @@ export default function CruisesPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">
-                Sea Eagle · Sunset with Reis Magos Church
+                Sea Eagle - Sunset with Reis Magos Church
               </span>
             </div>
             <div className="relative h-72 md:h-80 rounded-2xl overflow-hidden border border-[#c9a84c]/20
                             hover:border-[#c9a84c]/50 transition-all duration-300
                             hover:shadow-[0_8px_32px_rgba(201,168,76,0.15)]">
               <Image
-                src="/images/fleet/sea-eagle/IMG-20250903-WA0053.jpg"
-                alt="Sea Eagle yacht deck at golden hour on Mandovi River Goa"
+                src="/images/lexicon-sunset-cruise.jpg"
+                alt="Lexicon sunset cruise boat on Mandovi River Goa"
                 width={800}
                 height={600}
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
@@ -280,7 +280,7 @@ export default function CruisesPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">
-                Sea Eagle · Deck View at Golden Hour
+                Lexicon - Sunset Cruise on Mandovi River
               </span>
             </div>
           </div>

@@ -20,9 +20,9 @@ export const pageMeta: Record<string, {
 }> = {
 
     home: {
-        title: 'Goa Elite Experience | Casino, Yacht & Cruise Booking in Goa',
+        title: 'Luxury Yacht Rental Goa | Private Yacht Charter Panjim | Goa Elite Experience',
         description:
-            'Book premium casino packages, luxury yacht rentals & sunset cruises in Goa. Trusted local experts in Panjim. Instant WhatsApp confirmation. Best prices guaranteed. Call +91 8084676664.',
+            'Book premium casino packages, luxury yacht rentals & sunset cruises in Goa. Trusted local experts in Panjim. Instant WhatsApp confirmation. Best prices guaranteed. Call +91 7823077816.',
         keywords: [
             'goa tourism booking',
             'goa elite experience',
@@ -52,7 +52,7 @@ export const pageMeta: Record<string, {
     casino: {
         title: 'Casino Booking in Goa | Casino Pride, Deltin Royale & Big Daddy Packages',
         description:
-            'Book casino entry packages in Goa at the best prices. Casino Pride, Deltin Royale & Big Daddy Casino — chips, buffet & drinks included. Instant WhatsApp booking. Call +91 8084676664.',
+            'Book casino entry packages in Goa at the best prices. Casino Pride, Deltin Royale & Big Daddy Casino — chips, buffet & drinks included. Instant WhatsApp booking. Call +91 7823077816.',
         keywords: [
             'casino booking goa',
             'goa casino packages',
@@ -82,7 +82,7 @@ export const pageMeta: Record<string, {
     cruises: {
         title: 'Boat Cruise Goa | Sunset Cruise, Dinner Cruise & Party Boat Panjim',
         description:
-            'Best boat cruises in Goa on the Mandovi River. Sunset cruise, dinner cruise, party boat, dolphin trip & island adventure cruise. Best prices, instant booking. Call +91 8084676664.',
+            'Best boat cruises in Goa on the Mandovi River. Sunset cruise, dinner cruise, party boat, dolphin trip & island adventure cruise. Best prices, instant booking. Call +91 7823077816.',
         keywords: [
             'boat cruise goa',
             'sunset cruise goa',
@@ -142,7 +142,7 @@ export const pageMeta: Record<string, {
     'car-rental': {
         title: 'Car Rental in Goa | Self Drive & Chauffeur Cars | SUV, Sedan, Luxury',
         description:
-            'Rent a car in Goa with or without driver. Hatchbacks, sedans, SUVs & luxury cars available. Airport pickup, hotel transfer & full day rentals. Call +91 8084676664.',
+            'Rent a car in Goa with or without driver. Hatchbacks, sedans, SUVs & luxury cars available. Airport pickup, hotel transfer & full day rentals. Call +91 7823077816.',
         keywords: [
             'car rental goa',
             'self drive car goa',
@@ -172,7 +172,7 @@ export const pageMeta: Record<string, {
     taxi: {
         title: 'Taxi in Goa | Airport Transfer, Hotel Pickup & Sightseeing Taxi Panjim',
         description:
-            'Book reliable taxi services in Goa for airport pickup, hotel transfer & full-day sightseeing. North Goa & South Goa covered. WhatsApp booking. Call +91 8084676664.',
+            'Book reliable taxi services in Goa for airport pickup, hotel transfer & full-day sightseeing. North Goa & South Goa covered. WhatsApp booking. Call +91 7823077816.',
         keywords: [
             'taxi in goa',
             'goa taxi booking',
@@ -232,7 +232,7 @@ export const pageMeta: Record<string, {
     contact: {
         title: 'Contact Goa Elite Experience | WhatsApp & Call Booking Panjim Goa',
         description:
-            'Get in touch with Goa Elite Experience for casino, yacht, cruise, car rental or taxi bookings. WhatsApp us anytime or call +91 8084676664. Based in Panjim, Goa.',
+            'Get in touch with Goa Elite Experience for casino, yacht, cruise, car rental or taxi bookings. WhatsApp us anytime or call +91 7823077816. Based in Panjim, Goa.',
         keywords: [
             'contact goa elite experience',
             'goa booking contact',
@@ -325,7 +325,7 @@ export const rootMetadata: Metadata = {
         template: '%s | Goa Elite Experience',
     },
     description:
-        'Book premium casino packages, luxury yacht rentals & sunset cruises in Goa. Trusted local experts in Panjim with 500+ happy clients. Instant WhatsApp booking. Call +91 8084676664.',
+        'Book premium casino packages, luxury yacht rentals & sunset cruises in Goa. Trusted local experts in Panjim with 500+ happy clients. Instant WhatsApp booking. Call +91 7823077816.',
     keywords: [
         'goa elite experience',
         'casino booking goa',
