@@ -255,7 +255,7 @@ export default function CruisesPage() {
                             hover:border-[#c9a84c]/50 transition-all duration-300
                             hover:shadow-[0_8px_32px_rgba(201,168,76,0.15)]">
               <Image
-                src="/images/fleet/sea-eagle/IMG-20250903-WA0057(1).jpg"
+                src="/images/party-cruise.jpg"
                 alt="Sea Eagle yacht at sunset with heritage church on Mandovi River"
                 width={800}
                 height={600}
@@ -264,7 +264,7 @@ export default function CruisesPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <span className="absolute bottom-4 left-4 text-white text-sm font-semibold">
-                Sea Eagle - Sunset with Reis Magos Church
+                Sea Eagle - Sunset Party Cruise on Mandovi River
               </span>
             </div>
             <div className="relative h-72 md:h-80 rounded-2xl overflow-hidden border border-[#c9a84c]/20
