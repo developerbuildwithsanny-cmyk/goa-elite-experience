@@ -278,7 +278,7 @@ export function generatePageMetadata(page: keyof typeof pageMeta): Metadata {
         classification: 'Travel & Tourism',
         category: 'Tourism',
         icons: {
-            icon: '/favicon.ico',
+            icon: '/favicon.png',
             apple: '/apple-touch-icon.png',
         },
         alternates: {
@@ -340,7 +340,7 @@ export const rootMetadata: Metadata = {
     authors: [{ name: 'Goa Elite Experience', url: baseURL }],
     robots: { index: true, follow: true },
     icons: {
-        icon: '/favicon.ico',
+        icon: '/favicon.png',
         apple: '/apple-touch-icon.png',
     },
     openGraph: {
